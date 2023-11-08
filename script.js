@@ -15,7 +15,10 @@ function getScores(){
         })
         .then((data)=>{
             const sc = document.getElementById('table');
-            sc.innerHTML = '';
+            sc.innerHTML = `<tr>
+                                <td class = "bold">Name</td>
+                                <td class = "bold">Score</td>
+                            </tr>`;
             data.result.forEach(element => {
                 const tr = document.createElement('tr');
                 const td1 = document.createElement('td');
